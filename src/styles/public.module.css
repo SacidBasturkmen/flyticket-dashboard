@@ -1,0 +1,122 @@
+/* Değişkenler */
+:root {
+  --primary: #6366f1;          /* açık mor */
+  --primary-hover: #4f46e5;    /* mor */  
+  --bg-page: #f8fafc;          /* çok açık gri */
+  --text-dark: #111827;        /* koyu gri */
+  --text-light: #6b7280;       /* orta gri */
+  --border: #e5e7eb;           /* açık gri */
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
+/* Ana kahraman bölümü */
+.heroContainer {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.heroTitle {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+/* Form alanları */
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.inputField {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Uçuş listesi */
+.flightList {
+  list-style: none;
+  padding: 0;
+}
+
+.flightListItem {
+  background-color: white;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flightListItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.flightListLink {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.flightListLink:hover {
+  text-decoration: underline;
+}
+
+/* Hata Mesajı (Public) */
+.errorText {
+  color: #b91c1c;
+  background-color: #fee2e2;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Bilet Kartı */
+.ticketCard {
+  background-color: white;
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px var(--shadow);
+  margin-bottom: 1.5rem;
+}
+
+.ticketDetail {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+/* Buton */
+.btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+}

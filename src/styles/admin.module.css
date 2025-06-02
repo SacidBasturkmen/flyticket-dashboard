@@ -1,0 +1,171 @@
+/* Değişkenler */
+:root {
+  --primary: #4f46e5;          /* mor ton */
+  --primary-hover: #4338ca;    /* koyu mor */
+  --bg-sidebar: #1e293b;       /* koyu lacivert */
+  --bg-page: #f8fafc;          /* çok açık gri */
+  --text-dark: #111827;        /* koyu gri */
+  --text-light: #6b7280;       /* orta gri */
+  --border: #e5e7eb;           /* açık gri */
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
+/* Genel Container */
+.adminContainer {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-page);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: var(--bg-sidebar);
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.sidebar a {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar a:hover {
+  background-color: #374151;
+}
+
+/* Ana İçerik Alanı */
+.adminMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.adminHeader {
+  background-color: white;
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.adminHeader h1 {
+  font-size: 1.75rem;
+  color: var(--text-dark);
+}
+
+/* Section */
+.adminSection {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Tablo Stilleri */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+.table th,
+.table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-dark);
+}
+
+.table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.table tr:hover {
+  background-color: #f9fafb;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Form Stilleri */
+.formAdmin {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 500px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+.formAdmin label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.formAdmin input,
+.formAdmin select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.formAdmin input:focus,
+.formAdmin select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* Buton */
+.btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Hata Mesajı (Admin) */
+.errorTextAdmin {
+  color: #b91c1c;
+  background-color: #fee2e2;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}

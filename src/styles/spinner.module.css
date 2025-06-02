@@ -1,0 +1,26 @@
+/* Değişkenler */
+:root {
+  --spinner-bg: #e5e7eb;
+  --spinner-primary: #6366f1;
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.spinner {
+  border: 6px solid var(--spinner-bg);
+  border-top: 6px solid var(--spinner-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
