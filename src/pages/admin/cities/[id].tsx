@@ -1,4 +1,3 @@
-// src/pages/admin/cities/[id].tsx
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import LayoutAdmin from "../../../components/LayoutAdmin";

@@ -1,4 +1,3 @@
-// src/pages/admin/tickets/index.tsx
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import LayoutAdmin from "../../../components/LayoutAdmin";

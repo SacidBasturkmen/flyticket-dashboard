@@ -1,5 +1,3 @@
-// src/pages/admin/register.tsx
-
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import LayoutAdmin from "../../components/LayoutAdmin";
@@ -15,7 +13,6 @@ export default function AdminRegisterPage() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    // Eğer zaten giriş yapılmışsa dashboard'a yönlendir
     const token = localStorage.getItem("adminToken");
     if (token) {
       router.push("/admin/dashboard");

@@ -1,4 +1,4 @@
-// src/pages/flight/[id].tsx
+
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import LayoutPublic from "../../components/LayoutPublic";
@@ -15,7 +15,6 @@ export default function FlightDetailPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Rezervasyon formu
   const [passenger, setPassenger] = useState({
     name: "",
     surname: "",
@@ -54,7 +53,6 @@ export default function FlightDetailPage() {
         seat_number: passenger.seat_number || undefined,
       });
       
-      // Rezervasyon başarılı → confirmation sayfasına yönlendir
       router.push(`/confirmation?passenger_email=${ticket.passenger_email}`);
     } catch (err: any) {
       setBookingError(err.message);

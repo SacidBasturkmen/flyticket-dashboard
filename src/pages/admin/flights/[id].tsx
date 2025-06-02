@@ -1,4 +1,3 @@
-// src/pages/admin/flights/[id].tsx
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import LayoutAdmin from "../../../components/LayoutAdmin";
@@ -38,7 +37,6 @@ export default function EditFlightPage() {
       return;
     }
 
-    // Şehirler
     getAllCities()
       .then((data) => {
         setCities(data);
@@ -49,7 +47,6 @@ export default function EditFlightPage() {
         setLoadingCities(false);
       });
 
-    // Uçuş
     if (id) {
       getFlightById(id)
         .then((data) => {

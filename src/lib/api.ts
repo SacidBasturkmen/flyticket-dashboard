@@ -1,4 +1,3 @@
-// src/lib/api.ts
 import axios, { AxiosResponse } from "axios";
 
 const api = axios.create({
@@ -9,7 +8,7 @@ const api = axios.create({
 });
 
 api.interceptors.request.use((config) => {
-  // Eğer config.headers.requireAuth varsa, token ekle
+
   const requireAuth = config.headers?.["requireAuth"];
   if (requireAuth) {
     const token = localStorage.getItem("adminToken");
@@ -30,7 +29,6 @@ api.interceptors.response.use(
   }
 );
 
-// Tür tanımlamaları
 export interface City {
   city_id: string;
   city_name: string;
@@ -57,7 +55,6 @@ export interface Ticket {
   flight?: Flight;
 }
 
-// City
 export async function getAllCities(): Promise<City[]> {
   const res: AxiosResponse<City[]> = await api.get("/city");
   return res.data;
@@ -94,7 +91,7 @@ export async function deleteCity(id: string): Promise<void> {
   });
 }
 
-// Flight
+
 export async function getAllFlights(): Promise<Flight[]> {
   const res: AxiosResponse<Flight[]> = await api.get("/flight");
   return res.data;
@@ -145,7 +142,7 @@ export async function deleteFlight(id: string): Promise<void> {
   });
 }
 
-// Ticket
+
 export async function getAllTickets(): Promise<Ticket[]> {
   const res: AxiosResponse<Ticket[]> = await api.get("/ticket", {
     headers: { requireAuth: "true" },
@@ -169,7 +166,7 @@ export async function bookTicket(payload: {
   return res.data;
 }
 
-// Admin/Auth
+
 export async function registerAdmin(payload: {
   username: string;
   password: string;

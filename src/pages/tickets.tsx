@@ -1,4 +1,3 @@
-// src/pages/tickets.tsx
 import { useState } from "react";
 import LayoutPublic from "../components/LayoutPublic";
 import LoadingSpinner from "../components/LoadingSpinner";

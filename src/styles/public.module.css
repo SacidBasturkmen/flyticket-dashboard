@@ -1,11 +1,11 @@
 /* Değişkenler */
 :root {
-  --primary: #6366f1;          /* açık mor */
-  --primary-hover: #4f46e5;    /* mor */  
-  --bg-page: #f8fafc;          /* çok açık gri */
-  --text-dark: #111827;        /* koyu gri */
-  --text-light: #6b7280;       /* orta gri */
-  --border: #e5e7eb;           /* açık gri */
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --bg-page: #f8fafc;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --border: #e5e7eb;
   --shadow: rgba(0, 0, 0, 0.05);
 }
 

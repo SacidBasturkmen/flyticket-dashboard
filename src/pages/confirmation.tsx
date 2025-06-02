@@ -1,4 +1,3 @@
-// src/pages/confirmation.tsx
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import LayoutPublic from "../components/LayoutPublic";
@@ -17,15 +16,10 @@ export default function ConfirmationPage() {
   useEffect(() => {
     if (!passenger_email) return;
 
-    // API, ticket_id’ye göre GET /ticket/:email endpoint’i değil, yalnızca /ticket/:email olduğundan
-    // burada doğrudan bilet ID üzerinden çekemeyiz. Eğer backend’de GET /ticket/:ticket_id endpoint varsa kullanılır.
-    // Mevcut yapıda, Confirmation’da ticket bilgileri halihazırda oluşturulurken dönüyordu.
-    // Ancak, tekil GET endpoint’i yoksa, ticket verisini localStorage’dan bile geçirebilirsiniz.
-    // Varsayalım ki backend’de GET /ticket/:ticket_id endpoint’i var:
     (async () => {
       try {
         console.log("passenger_email: ",passenger_email)
-        const tickets = await getTicketsByEmail(passenger_email); // aslında email’e göre çağrı, burada ID kullanıyoruz.
+        const tickets = await getTicketsByEmail(passenger_email);
         console.log("tickets: ",tickets)
         const t = tickets.find((t) => t.passenger_email === passenger_email);
         if (!t) throw new Error("Bilet bulunamadı");
